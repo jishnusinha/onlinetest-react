@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "question": "Which statement about Hooks is not true?",
+
+    "answer": ["Hooks are 100% backwards-compatible and can be used side by side with classes", "Hooks are still in beta and not available yet", "Hooks are completely opt-in, there's no need to rewrite existing code", "All of the above"],
+    "correct_answer_index": 1
+  },
+  {
+    "id": 2,
+    "question": "Which one is not a Hook?",
+
+    "answer": ["useState()", "useConst()", "useReducer()", "All of the above"],
+    "correct_answer_index": 1
+  },
+  {
+    "id": 3,
+    "question": "What Hook should be used for data fetching?",
+
+    "answer": ["useDataFetching()", "useApi()", "useEffect()", "useRequest()"],
+    "correct_answer_index": 2
+  },
+  {
+    "id": 4,
+    "question": "Which statement about Hooks is not true?",
+
+    "answer": ["Hooks are 100% backwards-compatible and can be used side by side with classes", "Hooks are still in beta and not available yet", "Hooks are completely opt-in, there's no need to rewrite existing code", "All of the above"],
+    "correct_answer_index": 1
+  },
+  {
+    "id": 5,
+    "question": "Which one is not a Hook?",
+
+    "answer": ["useState()", "useConst()", "useReducer()", "All of the above"],
+    "correct_answer_index": 1
+  },
+  {
+    "id": 6,
+    "question": "What Hook should be used for data fetching?",
+
+    "answer": ["useDataFetching()", "useApi()", "useEffect()", "useRequest()"],
+    "correct_answer_index": 2
+  }
+]
