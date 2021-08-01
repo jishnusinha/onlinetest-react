@@ -28,6 +28,15 @@
   font-size: 16px;
 }
 
+.semiroundeddbtn {
+  border-radius: 25%;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+}
+
 .button1 {
   background-color: #ffffff;
   border: 1px solid rgb(86, 86, 87);
@@ -47,3 +56,11 @@
 .button5 {
   background-color: #555555;
 } /* Black */
+
+.button6 {
+  background-color: #fcf806;
+} /* yellow */
+
+.button7 {
+  background-color: #9a0bd3;
+} /* violet */

@@ -1,29 +1,25 @@
 import { Fragment, useState, useEffect } from "react";
-import Input from "../UI/Input";
+
 import Button from "../UI/Button";
 import Classes from "./Test.module.css";
-
 const LeftPanel = (props) => {
-  const { currentquestionindex, quiz, answerselect, questionState, updatequestionState, quizStatusarr } = props;
+  const { currentquestionindex, answerselect, questionState, updatequestionState, quizStatetracker } = props;
   const [selectedanswer, setselectedanswer] = useState(null);
+
   const setanswer = (i) => {
     answerselect(i);
     setselectedanswer(i);
   };
-  useEffect(() => {
-    if (questionState.answerSelectedindex === null) {
-      setselectedanswer(null);
-    } else {
-      setselectedanswer(quizStatusarr[currentquestionindex].answerSelectedindex);
-    }
 
-    //setselectedanswer(null);
-    let { attempted } = questionState;
+  useEffect(() => {
+    setselectedanswer(questionState.answerSelectedindex);
+    quizStatetracker({ ...questionState, attempted: true });
+
     updatequestionState({ ...questionState, attempted: true });
-  }, [questionState.index, questionState.answerSelectedindex]);
+  }, [currentquestionindex]);
 
   const options = ["A", "B", "C", "D"];
-  const option = quiz[currentquestionindex].answer.map((x, index) => {
+  const option = questionState.answer.map((x, index) => {
     return (
       <div style={{ display: "flex", marginTop: "10px" }}>
         <div style={{ border: "1px solid black", padding: "5px" }}>
@@ -41,7 +37,7 @@ const LeftPanel = (props) => {
   return (
     <Fragment>
       <div className={Classes.leftpanel}>
-        <h5>{quiz[0].question} </h5>
+        <h5>{questionState.question} </h5>
 
         {option}
       </div>
